@@ -33,18 +33,18 @@ async function createBookData(bookData) {
   }
 }
 
-app.post("/books", async (req, res) => {
-  try {
-    const savedBooks = await createBookData(req.body);
-    if (savedBooks) {
-      res
-        .status(201)
-        .json({ message: "Books added successfully", book: savedBooks });
-    }
-  } catch (error) {
-    res.status(500).json({ error: "Failed to add book data" });
-  }
-});
+// app.post("/books", async (req, res) => {
+//   try {
+//     const savedBooks = await createBookData(req.body);
+//     if (savedBooks) {
+//       res
+//         .status(201)
+//         .json({ message: "Books added successfully", book: savedBooks });
+//     }
+//   } catch (error) {
+//     res.status(500).json({ error: "Failed to add book data" });
+//   }
+// });
 
 // 2. Run your API and create another book data in the db.
 
