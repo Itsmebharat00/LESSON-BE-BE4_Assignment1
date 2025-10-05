@@ -106,7 +106,7 @@ app.get("/books", async (req, res) => {
       res.status(404).json({ error: "book not found." });
     }
   } catch (error) {
-    console.log("Error in fetching book by title:", error);
+    console.log("Error in fetching all books:", error);
     res.status(500).json({ error: "Failed to fetch book." });
   }
 });
@@ -275,7 +275,7 @@ app.delete("/books/:bookId", async (req, res) => {
       res.status(200).json({ message: "Book deleted successfully" });
     }
   } catch (error) {
-    res.status(500).json({ error: "Failed to Book restaurant" });
+    res.status(500).json({ error: "Failed to delete book" });
   }
 });
 
