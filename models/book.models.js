@@ -5,15 +5,15 @@ const mongoose = require("mongoose");
 const BookSchema = new mongoose.Schema({
   title: {
     type: String,
-    require: true,
+    required: true,
   },
   author: {
     type: String,
-    require: true,
+    required: true,
   },
   publishYear: {
     type: Number,
-    require: true,
+    required: true,
   },
   genre: {
     type: [String],
