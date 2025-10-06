@@ -5,7 +5,6 @@ const express = require("express");
 const Books = require("./models/book.models");
 const express = require("express");
 initializingDatabase();
-const app = express();
 app.use(express.json());
 const cors = require("cors");
 app.use(cors());
