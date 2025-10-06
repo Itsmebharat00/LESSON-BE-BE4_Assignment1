@@ -117,8 +117,8 @@ app.get("/books", async (req, res) => {
 
 async function readBookByTitle(title) {
   try {
-    const book = await Books.findOne({ title: title });
-    return book;
+    const books = await Books.findOne({ title: title });
+    return books;
   } catch (error) {
     console.log("Error in fetching book by title:", error);
     throw error;
@@ -127,8 +127,8 @@ async function readBookByTitle(title) {
 
 app.get("/books/title/:title", async (req, res) => {
   try {
-    const book = await readBookByTitle(req.params.title);
-    if (book) {
+    const books = await readBookByTitle(req.params.title);
+    if (books) {
       res.status(200).json({ message: "Book found", book });
     } else {
       res.status(404).json({ error: "Book not found" });
