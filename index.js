@@ -129,7 +129,7 @@ app.get("/books/title/:title", async (req, res) => {
   try {
     const books = await readBookByTitle(req.params.title);
     if (books) {
-      res.status(200).json({ message: "Book found", books: books });
+      res.status(200).json({ message: "Book found", books });
     } else {
       res.status(404).json({ error: "Book not found" });
     }
