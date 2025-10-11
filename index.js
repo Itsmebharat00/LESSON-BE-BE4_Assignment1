@@ -66,7 +66,7 @@ async function createNewBook(newBook) {
   }
 }
 
-app.post("/newBooks", async (req, res) => {
+app.post("/books", async (req, res) => {
   try {
     const savedBooks = await createNewBook(req.body);
     if (savedBooks) {
